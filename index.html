@@ -5,19 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boole</title>
     <link rel="stylesheet" href="boole.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pixelify Sans:wght@400;700&family=Playwrite+CU:wght@400;700&family=Orbitron:wght@400;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 </head>
 <body>
-    <input class="id-code" placeholder="id code">
-    <input type="number" class="students" placeholder="Number of student">
-    <input type="number" class="groups" placeholder="Number of groups">
-    <p></p>
-    <button class="gen">Generate</button>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <div class="members"></div>
+    <div class="header">
+        <div class="app-name">
+            <Span style="color: #f8fbff; font-family: 'Courier New', Courier, monospace; font-size: 40px;">B</Span>oole
+        </div>
+        <div class="about-i">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" color="#f8fbff" fill="none">
+                <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="#f8fbff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M12 16V11.5" stroke="#f8fbff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M12 8.01172V8.00172" stroke="#f8fbff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </div>
+        <!-- <div style="margin-left: 10px;" class="mail">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" color="#f8fbff" fill="none">
+                <path d="M6.5 9H8.5" stroke="#f8fbff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M17.5 8V4C17.5 2.89543 18.3954 2 19.5 2" stroke="#f8fbff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M12.5 18L12.5 22" stroke="#f8fbff" stroke-width="1.5" stroke-linecap="round"></path>
+                <path d="M17.5 5.15889C16.5351 5 15.2591 5 13.375 5H10.625C7.70671 5 6.24757 5 5.14302 5.59039C4.27088 6.05656 3.55656 6.77088 3.09039 7.64302C2.5 8.74757 2.5 10.2067 2.5 13.125C2.5 14.876 2.5 15.7515 2.85424 16.4142C3.13394 16.9375 3.56253 17.3661 4.08581 17.6458C4.74854 18 5.62403 18 7.375 18H16.625C18.376 18 19.2515 18 19.9142 17.6458C20.4375 17.3661 20.8661 16.9375 21.1458 16.4142C21.5 15.7515 21.5 14.876 21.5 13.125C21.5 10.2067 21.5 8.74757 20.9096 7.64302C20.7356 7.31755 20.5271 7.01406 20.2887 6.73725" stroke="#f8fbff" stroke-width="1.5" stroke-linecap="round"></path>
+                <path d="M12.5006 18V11C12.5006 10.071 12.5006 9.60649 12.439 9.21782C12.1002 7.07836 10.4222 5.40041 8.28276 5.06155C8.2009 5.04859 8.11566 5.03835 8.02344 5.03027" stroke="#f8fbff" stroke-width="1.5" stroke-linecap="round"></path>
+            </svg>
+        </div> -->
+    </div>
+    <div class="all">
+        <div class="inputs-fields">
+            <div class="input">
+                <input class="proj-name" placeholder="Project Name">
+            </div>
+            <div class="input">
+                <input class="id-code" placeholder="ID Code   ( eg. EF/BPS/24/ )">
+            </div>
+            <div class="input">
+                <input type="number" class="students" placeholder="Number of Students">
+            </div>
+            <div class="input">
+                <input type="number" class="groups" placeholder="Number of Groups">
+            </div>
+            <div class="btn">
+                <button class="gen">Generate</button>
+            </div>
+        </div>
+
+        <div class="display">
+            <div class="proj-name-display">
+                
+            </div>
+            <div class="members">
+                
+            </div>
+        </div>
+        <div class="prompt-btn">
+            <div class="home btn">
+                <button class="js-home">Home</button>
+            </div>
+            <div class="print btn">
+                <button class="js-print">Print</button>
+            </div>
+            <div class="shuffle btn">
+                <button class="js-shuffle">Shuffle</button>
+            </div>
+        </div>
+    </div>
+    <div class="about-page">
+        <p><h2>About Boole</h2></p>
+        <div>
+            Welcome to Boole, a revolutionary web application designed to transform your workflow by providing powerful tools for ID number generation, management, and grouping. Built with academics and professionals in mind, Boole boasts a range of intuitive features that facilitate seamless organization and boost productivity, helping you achieve more in less time.
+        </div>
+        <p></p>
+        <div class="short-cut">
+            <span style="font-size: 17px; font-weight: bold;">Keyboard Shortcuts:</span>
+            To enhance your user experience, Boole comes equipped with several keyboard shortcuts:
+            <p></p>
+
+            <span style="font-size: 16px; font-weight: bold;">Generate Content:</span>Press the “Enter” key to trigger the generate function, streamlining your content creation process.
+            <p></p>
+            <span style="font-size: 16px; font-weight: bold;">Print Function:</span> Use the “p” key to quickly access the print function and get your content in a printable format.
+            <p></p>
+            <span style="font-size: 16px; font-weight: bold;">On Print Page:</span>
+            
+
+            Press the “s” key to shuffle your content and explore different arrangements.
+
+            Press the “h” key to return to the homepage and start fresh.
+        </div>
+    </div>
+    
+    <div class="feedback-page">
+
+    </div>
     
     <script src="boole.js">
         
