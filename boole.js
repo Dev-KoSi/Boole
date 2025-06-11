@@ -172,11 +172,44 @@ s.addEventListener('input', () => {
 document.querySelector('.about-i').addEventListener('click', () => {
     if(lock3 === false) {
         document.querySelector('.about-page').style.display = 'block';
+        document.querySelector('.feedback-page').style.display = 'none';
 
         lock3 = true;
+        lock4 = false;
     } else {
         document.querySelector('.about-page').style.display = 'none';
 
         lock3 = false;
     }
-})
+});
+
+// FEEDBACK FUNC
+const userEmailInput = document.querySelector('.user-email');
+const userMessageInput = document.querySelector('.user-message');
+const sendBtn = document.querySelector('.send-btn');
+let lock4 = false;
+
+// FEEDBACK PAGE CONTROL
+document.querySelector('.mail').addEventListener('click', () => {
+    if(lock4 === false) {
+        document.querySelector('.feedback-page').style.display = 'block';
+        document.querySelector('.about-page').style.display = 'none';
+
+        lock4 = true;
+        lock3 = false;
+    } else {
+        document.querySelector('.feedback-page').style.display = 'none';
+
+        lock4 = false;
+    }
+});
+
+sendBtn.addEventListener('click', () => {
+    const userEmail = userEmailInput.value.trim();
+    const userMessage = userMessageInput.value.trim();
+
+    if (userEmail && userMessage) {
+        const mailtoLink = `mailto:kkojosika@gmail.com?subject=Boole feedback from ${userEmail}&body=${userMessage}`;
+        window.location.href = mailtoLink;
+    }
+});

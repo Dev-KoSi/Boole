@@ -7,6 +7,15 @@ svg{
     cursor: pointer;
     margin-top: 10px;
 }
+textarea{
+    max-width: 50%;
+    min-width: 50%;
+    max-height: 100px;
+    min-height: 100px;
+}
+button, input, textarea, .about-page, .feedback-page{
+    border-radius: 10px;
+}
 .header{
     background-color: #03624c;
     display: flex;
@@ -30,7 +39,7 @@ svg{
 .input{
     margin: 10px 0px ;
 }
-.input input{
+.input input, textarea{
     border: #03624c 1px solid;
     padding: 10px;
     width: 50%;
@@ -72,12 +81,26 @@ svg{
 
 .about-page{
     position: fixed;
-    top: 10%;
+    width: 50%;
+    top: 15%;
+    right: 0;
     background-color: #f8fbff;
     padding: 10px;
-    margin: 2px;
+    margin: 5px;
     border:  1px solid #03624c;
     display: none;
+}
+.feedback-page{
+    display: none;
+    text-align: center;
+    width: 50%;
+    position: fixed;
+    top: 15%;
+    right: 0;
+    border: 1px solid #03624c;
+    padding: 10px;
+    margin: 5px;
+    background-color: #f8fbff;
 }
 
 
@@ -96,5 +119,11 @@ svg{
     }
     .home, .shuffle, .print, .short-cut{
         display: none;
+    }
+    .about-page{
+        width: fit-content;
+    }
+    .feedback-page{
+        width: fit-content;
     }
 }
