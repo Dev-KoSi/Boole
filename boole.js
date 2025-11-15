@@ -86,7 +86,7 @@ function generate() {
             members.innerHTML += groupNum <= groups ? `<div class="grouping">Group ${groupNum}</div>` : '';
 
             if(groupNum > groups && cut === false) {
-                members.innerHTML += `<div class="surplus" style="color:red;">Surplus (Group ${Number(groups) + 1})</div>`;
+                members.innerHTML += `<div class="surplus" style="color:green;">Group ${Number(groups) + 1}</div>`;
 
                 cut = true;
             }
